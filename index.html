@@ -4,161 +4,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Srinidhi Cheedalla | Technical Writer</title>
-<meta name="description" content="Portfolio of Srinidhi Cheedalla, a technical writer focused on software documentation and API documentation, based in Hyderabad, India.">
+<meta name="description" content="Srinidhi Cheedalla's technical writing portfolio featuring software documentation, user guides and documentation projects.">
+<title>Srinidhi Cheedalla | Technical Writing Portfolio</title>
 <style>
-  :root {
-    --navy: #0f1c2e;
-    --navy-2: #182a42;
-    --accent: #f2b134;
-    --accent-dark: #d99a1c;
-    --bg: #ffffff;
-    --soft: #f1f4f8;
-    --text: #17212e;
-    --muted: #556272;
-    --line: #d9e0e8;
-    --serif: Georgia, "Times New Roman", serif;
-    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 64px; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
-  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 17px; line-height: 1.7; }
-  a { color: inherit; }
-  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-  h1, h2, h3 { font-family: var(--serif); line-height: 1.15; margin: 0 0 14px; }
-  p { margin: 0 0 14px; }
+:root{--ink:#172235;--navy:#10213a;--blue:#315b82;--gold:#d6a64f;--paper:#fff;--mist:#f3f6f9;--muted:#596779;--line:#dce3ea;--serif:Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.7 var(--sans)}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.wrap{width:min(1100px,calc(100% - 44px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(16,33,58,.97);backdrop-filter:blur(10px);color:white;border-bottom:1px solid #2b3c55}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font:700 20px var(--serif);text-decoration:none;white-space:nowrap}
+.nav ul{display:flex;flex-wrap:wrap;gap:8px 22px;list-style:none;margin:0;padding:0}
+.nav a:not(.brand){font-size:14px;color:#d7e0ea;text-decoration:none}
+.nav a:hover{color:#fff}
+.hero{background:linear-gradient(125deg,#10213a 0%,#1b3654 100%);color:#fff;padding:100px 0 94px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.eyebrow{color:#e8c47e;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}
+.hero h1{font:700 clamp(42px,6vw,68px)/1.05 var(--serif);margin:14px 0 18px;letter-spacing:-1.5px}
+.role{font-size:clamp(17px,2vw,21px);font-weight:600;color:#e8c47e;margin:0 0 18px}
+.intro{max-width:610px;color:#d5deea;font-size:18px;margin:0 0 30px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:5px;font-weight:700;text-decoration:none;border:1px solid var(--gold);transition:.2s}
+.btn-primary{background:var(--gold);color:#15243a}
+.btn-primary:hover{background:#e5bd76}
+.btn-outline{color:#fff;border-color:#8b9bae}
+.btn-outline:hover{background:#ffffff12}
+.location{margin-top:25px;color:#aebdce;font-size:14px}
+.doc-preview{background:#fff;color:var(--ink);border-radius:9px;overflow:hidden;box-shadow:16px 18px 0 rgba(214,166,79,.9);transform:rotate(1deg)}
+.preview-top{background:#edf1f5;padding:12px 16px;border-bottom:1px solid var(--line);display:flex;gap:7px;align-items:center}
+.dot{width:9px;height:9px;border-radius:50%;background:#aab7c5}
+.address{margin-left:8px;background:#fff;border:1px solid var(--line);border-radius:4px;padding:3px 10px;font-size:12px;color:var(--muted);flex:1}
+.preview-body{display:grid;grid-template-columns:125px 1fr;min-height:250px}
+.preview-side{background:#f7f9fb;border-right:1px solid var(--line);padding:18px 12px;font-size:12px;color:#647184}
+.preview-side strong{display:block;margin-bottom:12px;color:var(--navy)}
+.preview-side span{display:block;padding:5px 7px}
+.preview-side .active{background:#e8eef5;color:var(--navy);font-weight:700;border-radius:3px}
+.preview-content{padding:25px 22px}
+.preview-content h3{font:700 20px var(--serif);margin:0 0 17px}
+.fake-line{height:8px;border-radius:5px;background:#e7ecf1;margin:12px 0}
+.fake-code{height:52px;background:#142b48;border-left:4px solid var(--gold);border-radius:3px;margin:20px 0}
+section{padding:82px 0}
+.soft{background:var(--mist)}
+.section-label{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
+.section-title{font:700 clamp(30px,4vw,42px)/1.15 var(--serif);margin:8px 0 34px;color:var(--navy)}
+.section-title:after{content:"";display:block;width:54px;height:4px;background:var(--gold);margin-top:15px}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+.statement{font:26px/1.35 var(--serif);color:var(--navy);margin:0}
+.about-copy p{margin:0 0 14px;color:var(--muted)}
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skill-card,.project-card,.edu-card,.experience-card{background:#fff;border:1px solid var(--line);border-radius:7px;padding:23px}
+.skill-card{border-top:4px solid var(--blue)}
+.skill-card h3,.project-card h3,.edu-card h3,.experience-card h3{font:700 20px var(--serif);margin:0 0 12px;color:var(--navy)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{background:#eef2f6;border:1px solid #e0e6ed;border-radius:4px;padding:4px 9px;font-size:13px;color:#34465c}
+.project-feature{background:var(--navy);color:white;border-radius:9px;padding:36px;display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center}
+.project-feature h3{font:700 29px/1.2 var(--serif);margin:8px 0 12px}
+.project-feature p{color:#d0dae6;max-width:650px}
+.project-feature ul{padding-left:19px;color:#e4eaf1;columns:2;max-width:600px}
+.project-feature li{padding:4px 0}
+.project-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.text-link{color:#f1cc88;font-weight:700;text-underline-offset:4px}
+.project-note{font-size:13px;color:#b8c5d4;margin-top:14px}
+.project-side{border:1px solid #52657c;border-radius:7px;padding:20px;min-width:190px;text-align:center;color:#e8c47e}
+.project-side strong{display:block;font:700 40px var(--serif)}
+.project-side span{font-size:13px;color:#d1dbe6}
 
-  /* Header */
-  header { position: sticky; top: 0; z-index: 10; background: var(--navy); border-bottom: 1px solid var(--navy-2); }
-  header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 28px; padding-top: 14px; padding-bottom: 14px; }
-  .brand { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: #fff; text-decoration: none; }
-  nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 22px; }
-  nav a { color: #cdd7e3; text-decoration: none; font-size: 15px; font-weight: 500; padding: 4px 0; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; }
-  nav a:hover { color: #fff; border-bottom-color: var(--accent); }
-
-  /* Buttons */
-  .buttons { display: flex; flex-wrap: wrap; gap: 14px; }
-  .btn { display: inline-block; padding: 13px 26px; border-radius: 6px; border: 2px solid var(--accent); text-decoration: none; font-weight: 700; font-size: 16px; transition: background .15s, color .15s; }
-  .btn-primary { background: var(--accent); color: var(--navy); }
-  .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
-  .btn-outline { color: #fff; border-color: #6c7e95; }
-  .btn-outline:hover { border-color: #fff; }
-
-  /* Hero */
-  .hero { background: var(--navy); color: #fff; padding: 88px 0 96px; }
-  .hero .wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
-  .hero h1 { font-size: 4rem; margin-bottom: 14px; }
-  .role { font-size: 1.2rem; color: var(--accent); font-weight: 600; margin-bottom: 18px; }
-  .intro { color: #cdd7e3; font-size: 1.15rem; max-width: 46ch; margin-bottom: 32px; }
-  .where { margin-top: 28px; color: #9fb0c4; font-size: 15px; }
-
-  /* Browser mockup of the docs site */
-  .browser { background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #2c4160; box-shadow: 8px 8px 0 var(--accent); color: var(--text); }
-  .bar { background: var(--soft); border-bottom: 1px solid var(--line); padding: 10px 14px; display: flex; align-items: center; gap: 8px; }
-  .dot { width: 11px; height: 11px; border-radius: 50%; background: #c3ccd8; }
-  .url { margin-left: 8px; flex: 1; background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 1px 10px; font-size: 13px; color: var(--muted); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-  .screen { display: grid; grid-template-columns: 150px 1fr; min-height: 250px; }
-  .side { border-right: 1px solid var(--line); padding: 14px; font-size: 14px; background: #fafbfc; }
-  .side b { display: block; margin-bottom: 8px; font-size: 13px; color: var(--muted); font-weight: 600; }
-  .side span { display: block; padding: 3px 8px; margin-bottom: 2px; border-radius: 4px; }
-  .side .on { background: var(--navy); color: #fff; }
-  .page { padding: 18px; }
-  .page h4 { font-family: var(--serif); font-size: 1.2rem; margin: 0 0 14px; }
-  .line { height: 9px; background: #e3e8ee; border-radius: 4px; margin-bottom: 10px; }
-  .code { background: var(--navy); border-radius: 4px; height: 40px; margin: 16px 0; border-left: 4px solid var(--accent); }
-
-  /* Sections */
-  .s { padding: 88px 0; }
-  .s-soft { background: var(--soft); }
-  .s-dark { background: var(--navy); color: #fff; }
-  h2 { font-size: 2.6rem; margin-bottom: 36px; }
-  h2::after { content: ""; display: block; width: 64px; height: 6px; background: var(--accent); margin-top: 14px; }
-  .lead { font-family: var(--serif); font-size: 1.7rem; line-height: 1.35; }
-
-  /* About */
-  .about { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; }
-
-  /* Cards */
-  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .card { background: #fff; border: 1px solid var(--line); border-top: 6px solid var(--navy); border-radius: 6px; padding: 24px; transition: border-top-color .15s, transform .15s; }
-  .card:hover { border-top-color: var(--accent); transform: translateY(-3px); }
-  .card h3 { font-size: 1.25rem; }
-  .card p { color: var(--muted); margin: 0; }
-  .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-  .chips li { background: var(--soft); border: 1px solid var(--line); border-radius: 4px; padding: 4px 12px; font-size: 15px; font-weight: 500; }
-
-  /* Featured project */
-  .feature { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
-  .badge { display: inline-block; background: var(--accent); color: var(--navy); font-size: 14px; font-weight: 700; padding: 3px 14px; border-radius: 4px; margin-bottom: 16px; }
-  .feature h3 { font-size: 2.1rem; }
-  .feature p { color: #cdd7e3; }
-  .feature ul { margin: 0 0 28px; padding-left: 0; list-style: none; }
-  .feature li { padding: 8px 0 8px 28px; border-bottom: 1px solid #2c4160; position: relative; }
-  .feature li::before { content: ""; position: absolute; left: 4px; top: 17px; width: 10px; height: 10px; background: var(--accent); }
-  .sub { font-size: 1.7rem; margin: 0 0 24px; }
-  .more { margin-top: 28px; }
-  .more a { font-weight: 700; color: var(--navy); }
-
-  /* Timeline */
-  .timeline { border-left: 4px solid var(--navy); margin-left: 8px; padding-left: 36px; max-width: 720px; }
-  .job { position: relative; padding-bottom: 36px; }
-  .job:last-child { padding-bottom: 0; }
-  .job::before { content: ""; position: absolute; left: -48px; top: 8px; width: 20px; height: 20px; background: var(--accent); border: 4px solid var(--bg); outline: 2px solid var(--navy); border-radius: 50%; }
-  .job h3 { font-size: 1.5rem; margin-bottom: 2px; }
-  .job .co { font-weight: 600; margin-bottom: 2px; }
-  .job .when { color: var(--muted); margin: 0; }
-
-  /* Education */
-  .edu .years { font-family: var(--serif); font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
-  .edu h3 { font-size: 1.3rem; }
-  .edu .cg { margin-top: 12px; font-weight: 700; color: var(--text); }
-  .certs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .certs li { background: #fff; border: 1px solid var(--line); border-left: 6px solid var(--accent); border-radius: 6px; padding: 14px 18px; line-height: 1.5; }
-
-  /* Contact */
-  .big-mail { display: inline-block; font-family: var(--serif); font-size: 2.2rem; color: var(--accent); text-decoration: none; border-bottom: 3px solid var(--accent); margin: 8px 0 36px; overflow-wrap: anywhere; line-height: 1.25; }
-  .big-mail:hover { color: #fff; border-bottom-color: #fff; }
-  .contact-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .contact-list li { background: var(--navy-2); border-radius: 6px; padding: 16px 20px; overflow-wrap: anywhere; }
-  .contact-list span { display: block; font-size: 14px; color: #9fb0c4; }
-  .contact-list a { text-decoration: none; font-weight: 600; }
-  .contact-list a:hover { color: var(--accent); }
-  footer { background: #0a1422; color: #9fb0c4; padding: 20px 0; font-size: 15px; }
-
-  @media (max-width: 880px) {
-    .hero { padding: 56px 0 64px; }
-    .hero .wrap, .about, .feature { grid-template-columns: 1fr; gap: 36px; }
-    .hero h1 { font-size: 2.9rem; }
-    .grid-3, .grid-2, .certs, .contact-list { grid-template-columns: 1fr; }
-    .s { padding: 60px 0; }
-    h2 { font-size: 2.1rem; }
-    .lead { font-size: 1.4rem; }
-    .big-mail { font-size: 1.5rem; }
-  }
-  @media (max-width: 480px) {
-    body { font-size: 16px; }
-    .hero h1 { font-size: 2.4rem; }
-    .screen { grid-template-columns: 1fr; }
-    .side { display: none; }
-    .browser { box-shadow: 5px 5px 0 var(--accent); }
-    .btn { width: 100%; text-align: center; }
-  }
+/* Experience cards now keep their natural content height */
+.two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.training-card{align-self:start}
+.experience-card .meta,.edu-card .meta{color:var(--muted);font-size:14px;margin:0 0 10px}
+.experience-card p:last-child,.edu-card p:last-child{margin-bottom:0;color:var(--muted)}
+.experience-card ul{margin:12px 0 0;padding-left:19px;color:var(--muted)}
+.education-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.cert-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cert{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:6px;padding:20px}
+.cert h3{font:700 18px var(--serif);margin:0 0 6px;color:var(--navy)}
+.cert p{color:var(--muted);font-size:14px;margin:0 0 8px}
+.cert a{font-weight:700;color:var(--blue);font-size:14px;text-underline-offset:3px}
+.contact{background:var(--navy);color:#fff}
+.contact .section-title{color:white}
+.contact-intro{color:#d1dbe6;max-width:600px}
+.contact-grid{display:flex;flex-wrap:wrap;gap:16px 34px;margin-top:28px}
+.contact-item{color:#e8c47e;text-decoration:none;overflow-wrap:anywhere}
+.contact-item small{display:block;color:#aebdce;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.contact-item:hover{text-decoration:underline}
+footer{background:#0b1729;color:#aebdce;padding:20px 0;font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:850px){
+.nav{padding:13px 0;align-items:flex-start;flex-direction:column}
+.nav ul{gap:8px 15px}
+.hero{padding:70px 0}
+.hero-grid,.about-grid{grid-template-columns:1fr;gap:38px}
+.doc-preview{max-width:560px}
+.skill-grid{grid-template-columns:1fr 1fr}
+.project-feature{grid-template-columns:1fr}
+.project-side{display:none}
+}
+@media(max-width:600px){
+.wrap{width:min(100% - 30px,1100px)}
+section{padding:62px 0}
+.hero{padding:58px 0}
+.hero h1{font-size:43px}
+.intro{font-size:16px}
+.skill-grid,.two-col,.education-grid,.cert-row{grid-template-columns:1fr}
+.project-feature{padding:24px}
+.project-feature ul{columns:1}
+.preview-body{grid-template-columns:1fr}
+.preview-side{display:none}
+.footer-inner{display:block}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*{transition:none!important}
+}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="wrap">
+  <div class="wrap nav">
     <a class="brand" href="#home">Srinidhi Cheedalla</a>
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#documentation">Documentation Projects</a></li>
+        <li><a href="#work">Work Samples</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -168,235 +140,208 @@
 </header>
 
 <main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Technical Writing Portfolio</div>
+      <h1>Srinidhi<br>Cheedalla</h1>
+      <p class="role">Technical Writer | Software Documentation</p>
+      <p class="intro">I turn product and technical information into clear, structured documentation that helps people understand and use software with confidence.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://everafter-docs.vercel.app/" target="_blank" rel="noopener noreferrer">Explore my documentation</a>
+        <a class="btn btn-outline" href="#contact">Get in touch</a>
+      </div>
+      <p class="location">Hyderabad, India</p>
+    </div>
+    <div class="doc-preview" aria-label="Illustrative preview of a software documentation page">
+      <div class="preview-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="address">everafter-docs.vercel.app</span></div>
+      <div class="preview-body">
+        <aside class="preview-side">
+          <strong>EverAfter Docs</strong>
+          <span class="active">Installation</span>
+          <span>Release notes</span>
+          <span>Guides</span>
+          <span>API reference</span>
+        </aside>
+        <div class="preview-content">
+          <h3>Installation Guide</h3>
+          <div class="fake-line" style="width:95%"></div>
+          <div class="fake-line" style="width:78%"></div>
+          <div class="fake-code"></div>
+          <div class="fake-line" style="width:88%"></div>
+          <div class="fake-line" style="width:58%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <section class="hero" id="home">
-    <div class="wrap">
+<section id="about">
+  <div class="wrap">
+    <div class="section-label">A little about me</div>
+    <h2 class="section-title">About</h2>
+    <div class="about-grid">
+      <p class="statement">Clear information makes software easier to use.</p>
+      <div class="about-copy">
+        <p>I am an engineering graduate with a background in Artificial Intelligence and Machine Learning, building my career in technical writing and software documentation.</p>
+        <p>I enjoy organising information and explaining technical processes in a way that is easy to follow. My learning and project work includes user-focused guides, structured documentation, Markdown and documentation websites.</p>
+        <p>My portfolio's main work sample is the EverAfter Matrimony documentation website, built with Docusaurus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="skills">
+  <div class="wrap">
+    <div class="section-label">What I work with</div>
+    <h2 class="section-title">Skills</h2>
+    <div class="skill-grid">
+      <article class="skill-card">
+        <h3>Writing &amp; Structure</h3>
+        <div class="tags">
+          <span>Technical Writing</span>
+          <span>User Guides</span>
+          <span>Task-based Instructions</span>
+          <span>Information Architecture</span>
+          <span>Release Notes</span>
+        </div>
+      </article>
+      <article class="skill-card">
+        <h3>Tools &amp; Platforms</h3>
+        <div class="tags">
+          <span>Markdown</span>
+          <span>Docusaurus</span>
+          <span>GitHub</span>
+          <span>GitHub Wiki</span>
+          <span>Swagger / OpenAPI</span>
+        </div>
+      </article>
+      <article class="skill-card">
+        <h3>Technical Knowledge</h3>
+        <div class="tags">
+          <span>Software Testing</span>
+          <span>Web Applications</span>
+          <span>Python Fundamentals</span>
+          <span>SQL Fundamentals</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-label">Selected work</div>
+    <h2 class="section-title">Documentation Project</h2>
+    <article class="project-feature">
       <div>
-        <h1>Srinidhi Cheedalla</h1>
-        <p class="role">Technical Writer | Software Documentation | API Documentation</p>
-        <p class="intro">I write clear documentation, user guides and API references that help people understand and use software.</p>
-        <div class="buttons">
-          <a class="btn btn-primary" href="https://everafter-docs.vercel.app/" target="_blank" rel="noopener noreferrer">View my documentation project</a>
-          <a class="btn btn-outline" href="#contact">Contact me</a>
+        <div class="eyebrow">Featured portfolio project</div>
+        <h3>EverAfter Matrimony — Documentation Website</h3>
+        <p>A structured documentation website created with Docusaurus to practise organising and presenting software information for users and contributors.</p>
+        <ul>
+          <li>Installation and setup guidance</li>
+          <li>Release notes</li>
+          <li>Sprint documentation</li>
+          <li>Markdown examples</li>
+          <li>API reference content</li>
+        </ul>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://everafter-docs.vercel.app/" target="_blank" rel="noopener noreferrer">View live documentation</a>
+          <a class="text-link" href="https://github.com/Srinidhicheedalla/everafter-docs" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a>
         </div>
-        <p class="where">Based in Hyderabad, India</p>
+        <p class="project-note">Independent portfolio project. The documentation demonstrates my practice and learning in software documentation.</p>
       </div>
-
-      <div class="browser" aria-hidden="true">
-        <div class="bar">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          <span class="url">everafter-docs.vercel.app</span>
-        </div>
-        <div class="screen">
-          <div class="side">
-            <b>EverAfter Docs</b>
-            <span class="on">Installation Guide</span>
-            <span>Release Notes</span>
-            <span>Sprint Documentation</span>
-            <span>Markdown Features</span>
-            <span>API Reference</span>
-          </div>
-          <div class="page">
-            <h4>Installation Guide</h4>
-            <div class="line" style="width:92%"></div>
-            <div class="line" style="width:78%"></div>
-            <div class="code"></div>
-            <div class="line" style="width:88%"></div>
-            <div class="line" style="width:60%"></div>
-          </div>
-        </div>
+      <div class="project-side">
+        <strong>01</strong>
+        <span>Featured documentation<br>project</span>
       </div>
+    </article>
+  </div>
+</section>
+
+<section class="soft" id="experience">
+  <div class="wrap">
+    <div class="section-label">Professional background</div>
+    <h2 class="section-title">Experience &amp; Training</h2>
+    <div class="two-col">
+      <article class="experience-card">
+        <h3>QA Analyst</h3>
+        <p class="meta">Saathiya Matrimony · 6 months (May 2026 – Present)</p>
+        <p>Work involving quality checks and user-facing product validation.</p>
+        <ul>
+          <li>Review website functionality and usability.</li>
+          <li>Identify issues and communicate defects for resolution.</li>
+          <li>Monitor website performance using Lighthouse.</li>
+        </ul>
+      </article>
+
+      <article class="experience-card training-card">
+        <h3>Internship / Technical Training</h3>
+        <p class="meta">National Small Industries Corporation (NSIC) · August 2021 – February 2022</p>
+        <p>Completed technical training as part of diploma studies in Electronics and Communication Engineering.</p>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="s" id="about">
-    <div class="wrap">
-      <h2>About Me</h2>
-      <div class="about">
-        <p class="lead">I am an engineering graduate building a career in technical writing and software documentation.</p>
-        <div>
-          <p>I hold a B.Tech in Artificial Intelligence and Machine Learning. I enjoy turning technical information into clear, well-organised content.</p>
-          <p>I am interested in writing user guides, API references and other technical content that helps people understand and use software.</p>
-          <p>My most recent work in this area is a documentation website built with Docusaurus, which you can find in the Documentation Projects section below.</p>
-        </div>
-      </div>
+<section id="education">
+  <div class="wrap">
+    <div class="section-label">Academic background</div>
+    <h2 class="section-title">Education</h2>
+    <div class="education-grid">
+      <article class="edu-card">
+        <h3>B.Tech — Artificial Intelligence and Machine Learning</h3>
+        <p class="meta">CMR Institute of Technology, Hyderabad · 2022–2025</p>
+        <p>CGPA: 8.0</p>
+      </article>
+      <article class="edu-card">
+        <h3>Diploma — Electronics and Communication Engineering</h3>
+        <p class="meta">TKR College of Engineering and Technology · 2019–2022</p>
+        <p>CGPA: 8.1</p>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="s s-soft" id="skills">
-    <div class="wrap">
-      <h2>Skills</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Documentation</h3>
-          <ul class="chips">
-            <li>Technical Writing</li>
-            <li>User Guides</li>
-            <li>API Documentation</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Documentation Tools</h3>
-          <ul class="chips">
-            <li>Markdown</li>
-            <li>Docusaurus</li>
-            <li>GitHub</li>
-            <li>Swagger / OpenAPI</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Technical Background</h3>
-          <ul class="chips">
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Software Testing</li>
-          </ul>
-        </div>
-      </div>
+<section class="soft" id="certifications">
+  <div class="wrap">
+    <div class="section-label">Relevant learning</div>
+    <h2 class="section-title">Certifications</h2>
+    <div class="cert-row">
+      <article class="cert">
+        <h3>Technical Writing: How to Write Software Documentation</h3>
+        <p>Udemy · Jordan Stanchev · Completed 17 November 2026</p>
+        <a href="https://ude.my/UC-13232370-dcec-4cf2-b212-c879a655e699" target="_blank" rel="noopener noreferrer">View certificate ↗</a>
+      </article>
+      <article class="cert">
+        <h3>Enterprise Design Thinking Practitioner</h3>
+        <p>IBM SkillsBuild · Issued 19 November 2026</p>
+        <a href="https://www.credly.com/go/XOO57ZwW" target="_blank" rel="noopener noreferrer">Verify credential ↗</a>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="s s-dark" id="documentation">
-    <div class="wrap">
-      <h2>Documentation Projects</h2>
-      <div class="feature">
-        <div>
-          <span class="badge">Documentation project</span>
-          <h3>EverAfter Matrimony – Documentation Website</h3>
-          <p>I created this documentation website using Docusaurus. It includes:</p>
-          <ul>
-            <li>Installation Guide</li>
-            <li>Release Notes</li>
-            <li>Sprint Documentation</li>
-            <li>Markdown Features</li>
-            <li>API Reference</li>
-          </ul>
-          <a class="btn btn-primary" href="https://everafter-docs.vercel.app/" target="_blank" rel="noopener noreferrer">Open live website</a>
-        </div>
-        <div class="browser" aria-hidden="true">
-          <div class="bar">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="url">everafter-docs.vercel.app</span>
-          </div>
-          <div class="screen">
-            <div class="side">
-              <b>EverAfter Docs</b>
-              <span>Installation Guide</span>
-              <span>Release Notes</span>
-              <span>Sprint Documentation</span>
-              <span>Markdown Features</span>
-              <span class="on">API Reference</span>
-            </div>
-            <div class="page">
-              <h4>API Reference</h4>
-              <div class="line" style="width:85%"></div>
-              <div class="line" style="width:70%"></div>
-              <div class="code"></div>
-              <div class="line" style="width:90%"></div>
-              <div class="line" style="width:55%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-label">Let's connect</div>
+    <h2 class="section-title">Contact</h2>
+    <p class="contact-intro">For technical writing opportunities or to discuss my documentation work, you can reach me through the links below.</p>
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:cheedallasrinidhi2@gmail.com"><small>Email</small>cheedallasrinidhi2@gmail.com</a>
+      <a class="contact-item" href="tel:+919290999904"><small>Phone</small>9290999904</a>
+      <a class="contact-item" href="https://www.linkedin.com/in/srinidhi-cheedalla/" target="_blank" rel="noopener noreferrer"><small>LinkedIn</small>linkedin.com/in/srinidhi-cheedalla</a>
+      <a class="contact-item" href="https://github.com/Srinidhicheedalla" target="_blank" rel="noopener noreferrer"><small>GitHub</small>github.com/Srinidhicheedalla</a>
     </div>
-  </section>
-
-  <section class="s">
-    <div class="wrap">
-      <h3 class="sub">Other Academic and Technical Projects</h3>
-      <div class="grid-2">
-        <div class="card">
-          <h3>E-Commerce Platform</h3>
-          <p>An online shopping platform built as an academic project.</p>
-        </div>
-        <div class="card">
-          <h3>Generative AI Agriculture Chatbot</h3>
-          <p>A chatbot that uses generative AI for agriculture-related questions.</p>
-        </div>
-        <div class="card">
-          <h3>Adaptive Traffic Control System</h3>
-          <p>A project on controlling traffic signals adaptively.</p>
-        </div>
-        <div class="card">
-          <h3>Smart Crowd Panic Detection</h3>
-          <p>A project on detecting panic situations in crowds.</p>
-        </div>
-      </div>
-      <p class="more">My AI/ML work is also available on my <a href="https://srinidhicheedalla-github-io.vercel.app/" target="_blank" rel="noopener noreferrer">AI/ML portfolio</a>.</p>
-    </div>
-  </section>
-
-  <section class="s s-soft" id="experience">
-    <div class="wrap">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="job">
-          <h3>QA Analyst</h3>
-          <p class="co">Saathiya Matrimony</p>
-          <p class="when">May 2026 – October 2026 (6 months)</p>
-        </div>
-        <div class="job">
-          <h3>Account Associate</h3>
-          <p class="co">VXI Global Solutions</p>
-          <p class="when">October 2025 – January 2026</p>
-        </div>
-        <div class="job">
-          <h3>Internship / Training</h3>
-          <p class="co">NSIC</p>
-          <p class="when">August 2021 – February 2022</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="s" id="education">
-    <div class="wrap">
-      <h2>Education</h2>
-      <div class="grid-2">
-        <div class="card edu">
-          <p class="years">2022 – 2025</p>
-          <h3>B.Tech – Artificial Intelligence and Machine Learning</h3>
-          <p>CMR Institute of Technology, Hyderabad</p>
-          <p class="cg">CGPA: 8.0</p>
-        </div>
-        <div class="card edu">
-          <p class="years">2019 – 2022</p>
-          <h3>Diploma – Electronics and Communication Engineering</h3>
-          <p>TKR College of Engineering and Technology</p>
-          <p class="cg">CGPA: 8.1</p>
-        </div>
-      </div>
-
-      <h3 class="sub" style="margin-top:56px;">Certifications</h3>
-      <ul class="certs">
-        <li>Technical Writing: How to Write Software Documentation – Udemy</li>
-        <li>OpenWeaver AI Engineer Enthusiast Program</li>
-        <li>Accenture Forage – Data Automation</li>
-        <li>Walmart Forage – Retail Operations &amp; Supply Chain</li>
-        <li>NSIC Badge of Excellence</li>
-        <li>Naukri Young Turks – 94% Accuracy Score</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="s s-dark" id="contact">
-    <div class="wrap">
-      <h2>Contact</h2>
-      <p style="color:#cdd7e3;max-width:56ch;">I am open to technical writing opportunities. Write to me at:</p>
-      <a class="big-mail" href="mailto:cheedallasrinidhi2@gmail.com">cheedallasrinidhi2@gmail.com</a>
-      <ul class="contact-list">
-        <li><span>Phone</span><a href="tel:+919290999904">9290999904</a></li>
-        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/srinidhi-cheedalla/" target="_blank" rel="noopener noreferrer">linkedin.com/in/srinidhi-cheedalla</a></li>
-        <li><span>GitHub</span><a href="https://github.com/Srinidhicheedalla" target="_blank" rel="noopener noreferrer">github.com/Srinidhicheedalla</a></li>
-      </ul>
-    </div>
-  </section>
-
+  </div>
+</section>
 </main>
 
 <footer>
-  <div class="wrap">&copy; 2026 Srinidhi Cheedalla | Hyderabad, India</div>
+  <div class="wrap footer-inner">
+    <span>© 2026 Srinidhi Cheedalla</span>
+    <span>Technical Writing Portfolio · Hyderabad, India</span>
+  </div>
 </footer>
-
 </body>
 </html>
